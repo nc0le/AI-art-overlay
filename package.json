@@ -1,0 +1,23 @@
+{
+  "name": "ai-art-overlay",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nc0le/AI-art-overlay.git"
+  },
+  "author": "Nicole Cui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nc0le/AI-art-overlay/issues"
+  },
+  "homepage": "https://github.com/nc0le/AI-art-overlay#readme",
+  "description": "",
+  "devDependencies": {
+    "electron": "^37.2.0"
+  }
+}
