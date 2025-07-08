@@ -1,6 +1,30 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    display: flex;
+    cursor: pointer;
+}
+.top-bar{
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    pointer-events: auto; /* Allow interaction */
+}
 .title{
     font-size: 2em;
     color: #333;
     text-align: center;
     margin-top: 20px;
+}
+.button-group{
+    display: flex;
+    gap: 10px;
 }
