@@ -7,9 +7,11 @@ const createWindow = () => {
   const win = new BrowserWindow({
     width,
     height,
+    transparent: true, // Enable transparency
+    alwaysOnTop: true, // Keep the window always on top
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
-    }
+    },
   });
 
   win.loadFile('index.html'); // or your actual entry HTML
