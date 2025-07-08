@@ -1,17 +1,19 @@
-const { app, BrowserWindow, ipcMain } = require('electron/main')
-const path = require('node:path')
+const { app, BrowserWindow, screen, ipcMain } = require('electron');
+const path = require('path');
 
 const createWindow = () => {
+  const { width, height } = screen.getPrimaryDisplay().workAreaSize;
+
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width,
+    height,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
-  })
+  });
 
-  win.loadFile('index.html')
-}
+  win.loadFile('index.html'); // or your actual entry HTML
+};
 
 app.whenReady().then(() => {
     ipcMain.handle('ping', () => 'pong')
